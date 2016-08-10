@@ -25,15 +25,16 @@ values."
      ;; ----------------------------------------------------------------
      ;; auto-completion
      ;; better-defaults
-     themes-megapack
+     dockerfile
+     elixir
+     elm
      emacs-lisp
      html
      javascript
-     elixir
+     python
      react
      spotify
-     python
-     dockerfile
+     themes-megapack
      tmux
      yaml
 
@@ -41,6 +42,8 @@ values."
              c-c++-default-mode-for-headers 'c++-mode)
 
      rust
+     finance
+
      ;; '(shell :variables
      ;;         shell-default-shell 'term)
      (auto-completion :variables
@@ -114,22 +117,23 @@ values."
    ;; `dotspacemacs-startup-lists' doesn't include `recents'. (default 5)
    dotspacemacs-startup-recent-list-size 5
    ;; Default major mode of the scratch buffer (default `text-mode')
-   dotspacemacs-scratch-mode 'markdown-mode
+   dotspacemacs-scratch-mode 'org-mode
    ;; List of themes, the first of the list is loaded when spacemacs starts.
    ;; Press <SPC> T n to cycle to the next theme in the list (works great
    ;; with 2 themes variants, one dark and one light)
-   dotspacemacs-themes '(monokai
+   dotspacemacs-themes '(phoenix-dark-mono
+                         solarized-dark
+                         monokai
                          spacemacs-dark
                          spacemacs-light
                          solarized-light
-                         solarized-dark
                          leuven
                          zenburn)
    ;; If non nil the cursor color matches the state color in GUI Emacs.
    dotspacemacs-colorize-cursor-according-to-state t
    ;; Default font. `powerline-scale' allows to quickly tweak the mode-line
    ;; size to make separators look not too crappy.
-   dotspacemacs-default-font '("Fira Code Retina"
+   dotspacemacs-default-font '("Source Code Pro Light"
                                :size 12
                                :weight normal
                                :width normal
@@ -290,7 +294,15 @@ layers configuration. You are free to put any user code."
   (add-hook 'rust-mode-hook #'racer-mode)
   (add-hook 'racer-mode-hook #'eldoc-mode)
   (add-hook 'racer-mode-hook #'company-mode)
-  (setq company-tooltip-align-annotations t))
+
+  (setq company-tooltip-align-annotations t)
+
+  (setq projectile-enable-caching t)
+  ;; Highlighting
+  (add-hook 'after-init-hook #'toggle-crosshairs-when-idle 1)
+  (add-hook 'after-init-hook #'crosshairs-mode)
+  (setq col-highlight-vline-face-flag  t
+        col-highlight-face             hl-line-face))
 
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
