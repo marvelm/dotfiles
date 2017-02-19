@@ -5,7 +5,8 @@ sudo pacman -S fish \
   git \
   firefox \
   chromium \
-  gnupg
+  gnupg \
+  jq
 
 # install omf
 curl -L http://get.oh-my.fish | fish
