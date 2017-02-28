@@ -6,8 +6,6 @@ Plug 'Yggdroot/indentLine'
 Plug 'scrooloose/nerdcommenter'
 Plug 'godlygeek/tabular'
 Plug 'tpope/vim-obsession'
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-
 
 Plug 'scrooloose/nerdtree'
 Plug 'jistr/vim-nerdtree-tabs'
@@ -15,7 +13,6 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'pelodelfuego/vim-swoop'
 Plug 'vim-airline/vim-airline'
-
 
 Plug 'maksimr/vim-jsbeautify'
 Plug 'elixir-lang/vim-elixir'
