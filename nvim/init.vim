@@ -25,6 +25,7 @@ call plug#end()
 colorscheme newsprint
 set clipboard=unnamed
 set hidden
+syntax off
 
 map <leader>e :e 
 map <leader>w :w<CR>
