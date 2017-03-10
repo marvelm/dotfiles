@@ -13,6 +13,7 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'pelodelfuego/vim-swoop'
 Plug 'vim-airline/vim-airline'
+Plug 'rhysd/committia.vim'
 
 Plug 'maksimr/vim-jsbeautify'
 Plug 'elixir-lang/vim-elixir'
