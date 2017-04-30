@@ -1,6 +1,6 @@
 #!/bin/sh
-
-sudo pacman -S neovim \
+sudo pacman -S zsh \
+  neovim \
   tmux \
   ranger \
   git \
@@ -18,3 +18,6 @@ git clone https://github.com/jimeh/tmux-themepack.git ~/.tmux-themepack
 
 cp ./tmux/.tmux.conf ~/
 cp -r ./nvim/* ~/.config/nvim/
+cp zsh/.zshrc ~/
+
+sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
