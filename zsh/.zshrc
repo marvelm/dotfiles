@@ -1,4 +1,4 @@
-export ZSH="$HOME/.oh-my-zsh"
+export ZSH=/home/m/.oh-my-zsh
 ZSH_THEME="fishy"
 
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=red'
@@ -7,6 +7,11 @@ plugins=(git per-directory-history history-substring-search zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
 
+fzf_history() {
+  print -z $( ([ -n "$ZSH_NAME" ] && fc -l 1 || history) | fzf +s --tac | sed 's/ *[0-9]* *//')
+}
+zle -N fzf_history fzf_history # Create widget
+bindkey '^t' fzf_history # Bind ctrl-t to widget
 
 autoload -U colors && colors
 PS1="%{$fg[white]%}%n%{$reset_color%}@%{$fg[white]%}%m %{$fg[white]%}%~ %{$reset_color%}%% "
