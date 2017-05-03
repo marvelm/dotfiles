@@ -6,6 +6,7 @@ Plug 'Yggdroot/indentLine'
 Plug 'scrooloose/nerdcommenter'
 Plug 'godlygeek/tabular'
 Plug 'tpope/vim-obsession'
+Plug 'airblade/vim-gitgutter'
 
 Plug 'scrooloose/nerdtree'
 Plug 'jistr/vim-nerdtree-tabs'
