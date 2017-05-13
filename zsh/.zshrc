@@ -1,4 +1,8 @@
-export ZSH=/home/m/.oh-my-zsh
+export PATH=$HOME/bin:/usr/local/bin:$PATH
+
+# Path to your oh-my-zsh installation.
+export ZSH=$HOME/.oh-my-zsh
+
 ZSH_THEME="fishy"
 
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=red'
@@ -38,6 +42,10 @@ alias gd="git diff"
 alias gdt="git difftool"
 alias gco="git checkout"
 alias gca="git commit -a"
+alias grh="git reset --hard HEAD"
+alias show-deps="jq '.dependencies' package.json"
+
+alias tmux="TERM=screen-256color-bce tmux"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm

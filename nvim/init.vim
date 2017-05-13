@@ -23,7 +23,6 @@ Plug 'lambdatoast/elm.vim'
 
 call plug#end()
 
-
 colorscheme newsprint
 set clipboard=unnamed
 set hidden
@@ -34,6 +33,7 @@ map <leader>w :w<CR>
 map <leader>x :x<CR>
 map <leader>q :q<CR>
 map <leader>d :bd<CR>
+
 map ` :bp<CR>
 map <tab> :bn<CR>
 map <leader>r :source ~/.config/nvim/init.vim<CR>
@@ -42,12 +42,16 @@ map <leader>f :FZF<CR>
 map <leader>b :Buffers<CR>
 map <leader><leader> <Plug>NERDCommenterToggle
 map <leader>n <Plug>NERDTreeTabsToggle<CR>
-nmap <Leader>s :call Swoop()<CR>
+map <leader>hn :GitGutterNextHunk<CR>
+map <leader>hp :GitGutterPrevHunk<CR>
+nmap <leader>s :call Swoop()<CR>
 
 let g:swoopUseDefaultKeyMap = 0
 let g:vim_json_syntax_conceal = 0
 
 let g:airline#extensions#tabline#enabled = 1
+
+set mouse=a
 
 set showcmd             " Show (partial) command in status line.
 set showmatch           " Show matching brackets.
@@ -57,12 +61,12 @@ set number              " Show the line numbers on the left side.
 set formatoptions+=o    " Continue comment marker in new lines.
 set textwidth=0         " Hard-wrap long lines as you type them.
 set expandtab           " Insert spaces when TAB is pressed.
-set tabstop=2           " Render TABs using this many spaces.
-set shiftwidth=2        " Indentation amount for < and > commands.
+set tabstop=4           " Render TABs using this many spaces.
+set shiftwidth=4        " Indentation amount for < and > commands.
 
 set noerrorbells        " No beeps.
 set modeline            " Enable modeline.
-set esckeys             " Cursor keys in insert mode.
+"set esckeys             " Cursor keys in insert mode.
 set linespace=0         " Set line-spacing to minimum.
 set nojoinspaces        " Prevents inserting two spaces after punctuation on a join (J)
 
